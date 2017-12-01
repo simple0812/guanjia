@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Menu, Icon, Button } from 'antd';
 import { browserHistory } from 'react-router';
 
-import styles from './TopNav.less';
+import styles from './less/TopNav.less';
 
 
 import {
@@ -51,13 +51,14 @@ export default class TopNav extends Component {
           <img src='../../assets/images/warning.svg' alt='warning' />
         </span>
         <span className='topnav-user'>
+          <img src='../../assets/images/UserPortrait.png' alt='hint' />
           <div className='user-box'>
-            <p className='user-info'>超级玛丽奥</p>
             <ul>
-              <li className='active'><span>自定义主页</span></li>
+              <li><p className='user-info'>超级玛丽奥</p></li>
+              <li><span>自定义主页</span></li>
               <li><span>个人信息</span></li>
+              <li><p className='user-logout'>退出</p></li>
             </ul>
-            <p className='user-logout'>退出</p>
           </div>
         </span>
       </div>

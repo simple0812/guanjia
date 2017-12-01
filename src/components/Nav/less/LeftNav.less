@@ -39,9 +39,12 @@ html,body {height:100%;}
 .menuContainer { width: 200px; positon:relative;}
 .searchcontainer input { background: inherit; }
 .searchcontainer .ant-input-search-icon {color: white;}
+
 .menu { width: 200px;height:100%;background:#283444; overflow-y:auto; position:absolute;  overflow-x:hidden; z-index:999;}
-.menu-togglebox { width:200px; height:60px; position:absolute; left:200px;  height: 60px; border-bottom: 5px solid #283444; z-index:100; background:white;}
-.menu-togglebox .icon { width:60px; height: 60px; line-height: 60px; display: inline-block;text-align: center; vertical-align: middle;}
+.btn-togglecontainer {width:8px; height:100%; position:absolute; }
+.menu-togglebox { width:200px; height:60px; line-height:60px; position:absolute; left:200px; border-bottom: 5px solid #283444; z-index:100; background:white;}
+.menu-togglebox div {width:60px; height:60px; text-align:center;vertical-align: middle;}
+.menu-togglebox .icon { width:14px; height: 14px; }
 .menu-item {margin-bottom: 10px; margin-top: 10px;}
 .menu-item .submenu {display:none;}
 .menu-item .submenu-collapsed {display:none;}
@@ -65,7 +68,7 @@ html,body {height:100%;}
 
 
 .v3menucontainer {position: absolute; top: 0px; left: 200px; height:100%; z-index:10;  width: 200px;overflow-y:auto; border-right:1px solid #d8d8d8; }
-.collapsedlv3-button {position:absolute; top:50%; right:0; cursor:pointer;}
+.collapsedlv3-button {position:absolute; top:50%; right:0; cursor:pointer; z-index:12;}
 
 .v3menu-header {height:60px; line-height:60px;}
 .v3menu-header i { margin-left:13px; margin-right:7px; width:15px; height:15px; }

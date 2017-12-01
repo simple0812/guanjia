@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Menu, Icon, Button, Input  } from 'antd';
 import { browserHistory } from 'react-router';
 
-import styles from './LeftNav.less';
+import styles from './less/LeftNav.less';
 
 import {
   Link

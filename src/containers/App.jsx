@@ -17,16 +17,17 @@ import {
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import About from '../components/About';
-import LeftNav from '../components/Nav/LeftNav';
-import TopNav from '../components/Nav/TopNav';
+import LeftNav from '../components/Nav/LeftNav.js';
+import TopNav from '../components/Nav/TopNav.js';
 import Websites  from '../components/website/Websites';
+import mockData from '../components/Nav/mockdata';
 
 export default class App extends Component {
   render() {
     return (
       <Router>
         <div className='layout-container'>
-          <LeftNav />
+          <LeftNav dataSource={mockData} />
           <div className='content-container'>
             <TopNav />
             <p>contentxxx</p>

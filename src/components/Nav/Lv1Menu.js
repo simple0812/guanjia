@@ -1,29 +1,19 @@
 import React, { Component } from 'react'
-import { Menu, Icon, Button, Input  } from 'antd';
+import { Menu, Icon, Button, Input,Tooltip  } from 'antd';
 import { browserHistory } from 'react-router';
 
-import styles from './LeftNav.less';
+import styles from './less/LeftNav.less';
 
 import {
   Link
 } from 'react-router-dom'
 
 export default class Lv1Menu extends Component {
-  static defaultProps = {
-      collapsed:　true,
-  }
-
   constructor(props) {
     super(props);
     this.state = {
       active: false
     }
-  }
-
-  toggleCollapsed = () => {
-    this.setState({
-      collapsed: !this.state.collapsed,
-    });
   }
 
   componentWillMount(){
@@ -54,12 +44,14 @@ export default class Lv1Menu extends Component {
   render() {
     return (
       <li className={ this.state.active ? 'menu-item active': 'menu-item' }>
-        <span className={ this.props.collapsed ? 'menu-item__header-collapsed': 'menu-item__header' }
-          onClick={this.togglelv1Menu.bind(this)}>
-          <Icon type={this.props.dataSource.icon} />
-          <strong>{this.props.dataSource.name}</strong>
-          <Icon type={this.state.active ? 'down': 'right' } className='menu-item__header-icon'  style={{marginLeft:50}}/>
-        </span>
+        <Tooltip placement="right" title={this.props.dataSource.name}>
+          <span className={ this.props.collapsed ? 'menu-item__header-collapsed': 'menu-item__header' }
+            onClick={this.togglelv1Menu.bind(this)}>
+            <Icon type={this.props.dataSource.icon} />
+            <strong>{this.props.dataSource.name}</strong>
+            <Icon type={this.state.active ? 'down': 'right' } className='menu-item__header-icon'  style={{marginLeft:50}}/>
+          </span>
+        </Tooltip>
         <ul className={ this.props.collapsed ? 'submenu-collapsed': 'submenu' }>
           {
             this.initMenu(this.props.dataSource.submenus)
