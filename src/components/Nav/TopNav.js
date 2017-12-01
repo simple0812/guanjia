@@ -51,7 +51,7 @@ export default class TopNav extends Component {
           <img src='../../assets/images/warning.svg' alt='warning' />
         </span>
         <span className='topnav-user'>
-          <img src='../../assets/images/UserPortrait.png' alt='hint' />
+          <img src='../../assets/images/person.png' alt='person' />
           <div className='user-box'>
             <ul>
               <li><p className='user-info'>超级玛丽奥</p></li>
